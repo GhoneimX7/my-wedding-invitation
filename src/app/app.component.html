@@ -1,0 +1,172 @@
+<main>
+  <section class="hero" id="home">
+    <!-- Visible botanical artwork -->
+    <svg class="floral floral-tl" viewBox="0 0 360 360" aria-hidden="true">
+      <g fill="none" stroke="#68735d" stroke-width="3" stroke-linecap="round">
+        <path d="M35 325 C95 260 100 180 145 85"/>
+        <path d="M95 270 C170 220 210 155 255 45"/>
+        <path d="M78 260 C45 230 35 195 43 158"/>
+      </g>
+      <g fill="#7b876e">
+        <ellipse cx="82" cy="253" rx="15" ry="7" transform="rotate(-35 82 253)"/>
+        <ellipse cx="104" cy="225" rx="16" ry="7" transform="rotate(35 104 225)"/>
+        <ellipse cx="111" cy="190" rx="15" ry="7" transform="rotate(-30 111 190)"/>
+        <ellipse cx="130" cy="154" rx="16" ry="7" transform="rotate(35 130 154)"/>
+        <ellipse cx="160" cy="112" rx="15" ry="7" transform="rotate(-35 160 112)"/>
+        <ellipse cx="195" cy="155" rx="15" ry="7" transform="rotate(-35 195 155)"/>
+        <ellipse cx="220" cy="120" rx="16" ry="7" transform="rotate(35 220 120)"/>
+        <ellipse cx="245" cy="78" rx="15" ry="7" transform="rotate(-35 245 78)"/>
+      </g>
+      <g stroke="#b98b48" stroke-width="2" fill="none">
+        <path d="M55 115 C25 80 45 45 78 58 C102 68 91 103 55 115Z"/>
+        <path d="M195 82 C165 45 188 17 219 31 C244 42 229 69 195 82Z"/>
+      </g>
+      <g>
+        <circle cx="73" cy="68" r="31" fill="#e8aaa3"/>
+        <circle cx="73" cy="68" r="20" fill="#f7d7d2"/>
+        <circle cx="73" cy="68" r="9" fill="#b66b62"/>
+        <circle cx="42" cy="112" r="25" fill="#efbdb7"/>
+        <circle cx="42" cy="112" r="15" fill="#fff2ed"/>
+        <circle cx="42" cy="112" r="7" fill="#b66b62"/>
+        <circle cx="150" cy="49" r="28" fill="#f0c5bd"/>
+        <circle cx="150" cy="49" r="16" fill="#fff5f0"/>
+        <circle cx="150" cy="49" r="7" fill="#b66b62"/>
+      </g>
+      <g fill="#d58d86">
+        <circle cx="116" cy="82" r="5"/><circle cx="126" cy="96" r="4"/>
+        <circle cx="168" cy="91" r="5"/><circle cx="181" cy="102" r="4"/>
+      </g>
+    </svg>
+
+    <svg class="floral floral-br" viewBox="0 0 420 420" aria-hidden="true">
+      <g fill="none" stroke="#68735d" stroke-width="3" stroke-linecap="round">
+        <path d="M25 395 C110 325 125 250 180 125"/>
+        <path d="M110 345 C205 305 260 235 310 110"/>
+      </g>
+      <g fill="#718067">
+        <ellipse cx="87" cy="335" rx="17" ry="7" transform="rotate(-35 87 335)"/>
+        <ellipse cx="120" cy="305" rx="17" ry="7" transform="rotate(35 120 305)"/>
+        <ellipse cx="145" cy="260" rx="17" ry="7" transform="rotate(-30 145 260)"/>
+        <ellipse cx="180" cy="224" rx="18" ry="7" transform="rotate(35 180 224)"/>
+        <ellipse cx="220" cy="184" rx="17" ry="7" transform="rotate(-35 220 184)"/>
+        <ellipse cx="260" cy="145" rx="18" ry="7" transform="rotate(35 260 145)"/>
+        <ellipse cx="310" cy="116" rx="16" ry="7" transform="rotate(-35 310 116)"/>
+      </g>
+      <g>
+        <circle cx="295" cy="310" r="45" fill="#e6aaa2"/>
+        <circle cx="295" cy="310" r="29" fill="#f9ded8"/>
+        <circle cx="295" cy="310" r="12" fill="#b86c63"/>
+        <circle cx="365" cy="352" r="34" fill="#efc1b9"/>
+        <circle cx="365" cy="352" r="22" fill="#fff1ec"/>
+        <circle cx="365" cy="352" r="9" fill="#b86c63"/>
+        <circle cx="235" cy="365" r="30" fill="#f0c9c1"/>
+        <circle cx="235" cy="365" r="18" fill="#fff4ef"/>
+        <circle cx="235" cy="365" r="8" fill="#b86c63"/>
+      </g>
+      <g fill="#d48c84"><circle cx="340" cy="275" r="6"/><circle cx="355" cy="292" r="4"/><circle cx="206" cy="328" r="5"/></g>
+    </svg>
+
+    <div class="hero-content">
+      <p class="eyebrow">بمشيئة الله تعالى</p>
+      <p class="script hero-name">{{ groom }}</p>
+      <div class="and-row"><span></span><b>و</b><span></span></div>
+      <p class="script hero-name">{{ bride }}</p>
+      <div class="ornament">❦</div>
+      <p class="invite-copy">يسعدنا دعوتكم لمشاركتنا فرحتنا<br>بمناسبة حفل زفافنا</p>
+      <div class="hero-date">
+        <strong>{{ weddingDate }}</strong>
+        <span>{{ day }} · {{ time }}</span>
+      </div>
+
+      <div class="countdown" aria-label="العد التنازلي لموعد الزفاف">
+        <div class="countdown-item"><span class="countdown-value">{{ days }}</span><span class="countdown-label">يوم</span></div>
+        <div class="countdown-item"><span class="countdown-value">{{ hours }}</span><span class="countdown-label">ساعة</span></div>
+        <div class="countdown-item"><span class="countdown-value">{{ minutes }}</span><span class="countdown-label">دقيقة</span></div>
+        <div class="countdown-item"><span class="countdown-value">{{ seconds }}</span><span class="countdown-label">ثانية</span></div>
+      </div>
+
+      <button class="primary-button" (click)="scrollTo('verse')">افتحوا الدعوة <span>↓</span></button>
+    </div>
+  </section>
+
+  <section class="section verse-section" id = "verse">
+    <div class="section-inner narrow">
+      <p class="mini-ornament">{{ basmallah }}</p>
+      <p class="verse-text">{{ quranVerse }}</p>
+      <p class="verse-reference">{{ quranReference }}</p>
+    </div>
+  </section>
+
+  <section class="section intro" id="invitation">
+    <div class="section-inner narrow">
+      <p class="eyebrow">احتفالٌ بالحب</p>
+      <h2>قلبان يجتمعان في بداية جميلة</h2>
+      <p class="body-copy">يملأ قلوبنا الفرح ونحن ندعوكم لتكونوا جزءًا من يومنا المميز، ونبدأ معًا هذا الفصل الجديد من حياتنا. حضوركم ودعواتكم لنا تعني لنا الكثير.</p>
+      <div class="mini-ornament">✦</div>
+    </div>
+  </section>
+
+  <section class="section details-section" id="details">
+    <div class="section-inner">
+      <p class="eyebrow">احفظوا الموعد</p>
+      <h2>حفل الزفاف</h2>
+      <div class="details-grid">
+        <article class="detail-card"><div class="detail-icon">♡</div><p class="detail-label">التاريخ</p><h3>{{ weddingDate }}</h3><p>{{ day }}</p></article>
+        <article class="detail-card featured"><div class="detail-icon">◷</div><p class="detail-label">الوقت</p><h3>{{ time }}</h3><p>حفل الزفاف</p></article>
+        <article class="detail-card"><div class="detail-icon">⌖</div><p class="detail-label">المكان</p><h3>{{ venue }} </h3></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story">
+    <div class="section-inner story-grid">
+      <div class="story-copy"><p class="eyebrow">قصتنا</p><h2>لمحة عنّا</h2><p class="body-copy">بدأت القصة بكلمة، ونمت مع كل حديث، وتحولت إلى وعدٍ بالسير معًا في دروب الحياة.</p><p class="body-copy">واليوم، ومحاطين بمن نحب، يسعدنا أن نقول "قبلنا" ونبدأ حياتنا الجديدة معًا.</p></div>
+      <div class="story-photo"><img class="couple-photo" src="assets/couple.jpg" alt="{{ groom }} و{{ bride }}"></div>
+    </div>
+  </section>
+
+  <section class="section schedule-section" id="schedule">
+    <div class="section-inner narrow"><p class="eyebrow">برنامج الحفل</p><h2>يوم الزفاف</h2>
+      <div class="timeline">
+        <div class="timeline-item"><span class="timeline-time">7:00 مساءً</span><div><h3>استقبال الضيوف</h3><p>الترحيب وتقديم المشروبات</p></div></div>
+        <div class="timeline-item"><span class="timeline-time">7:30 مساءً</span><div><h3>العقد والإشهار</h3><p>لحظة "قبلنا" المنتظرة</p></div></div>
+        <div class="timeline-item"><span class="timeline-time">8:00 مساءً</span><div><h3>التقط صورة معنا</h3><p>اصنع ذكرى</p></div></div>
+        <div class="timeline-item"><span class="timeline-time">8:30 مساءً</span><div><h3>الختام</h3><p>لتبدأ الفرحة الحقيقية</p></div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section location-section" id="location">
+    <div class="section-inner location-card">
+      <div>
+        <p class="eyebrow">موقع الحفل</p>
+        <h2>{{ venue }}</h2>
+        <h2>{{ venueEng }}</h2>
+      </div>
+      <div class="qr-card">
+        <p class="body-copy">امسحوا الرمز أو اضغطوا الزر لفتح الموقع على خرائط جوجل.</p>
+        <img class="qr-image" [src]="qrCodeUrl" alt="رمز QR لموقع الحفل">
+        <br>
+        <button class="outline-button" type="button" (click)="openMap()">افتح في خرائط جوجل</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rsvp-section" id="rsvp">
+    <div class="section-inner narrow"><p class="eyebrow">يسعدنا احتفالكم معنا</p><h2>هل ستنضمون إلينا؟</h2><p class="body-copy">شاركنا برسالة في يومنا المميز</p>
+      @if (!rsvpSubmitted) {
+        <form class="rsvp-form" (submit)="onRsvpSubmit($event, nameInput.value, messageInput.value)">
+          <label>الاسم<input type="text" #nameInput placeholder="أدخل اسمك" required></label>
+          <label>رسالة<textarea rows="4" #messageInput placeholder="اترك لنا رسالة قصيرة..."></textarea></label>
+          <button class="primary-button" type="submit" [disabled]="rsvpSubmitting">{{ rsvpSubmitting ? 'جارٍ الإرسال...' : 'إرسال' }}</button>
+        </form>
+      } @else {
+        <p class="rsvp-success">شكرًا لكم! تم استلام ردكم بنجاح. ❦</p>
+      }
+    </div>
+  </section>
+
+  <footer><div class="footer-ornament">❦</div><p class="script">{{ groom }} و{{ bride }}</p><p>{{ weddingDate }} · {{ venue }}</p><button (click)="scrollTo('home')" aria-label="العودة للأعلى">↑</button></footer>
+</main>
