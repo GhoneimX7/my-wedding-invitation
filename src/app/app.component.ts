@@ -9,7 +9,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class AppComponent implements OnInit, OnDestroy {
   groom = 'طه';
   bride = 'رؤى';
-  weddingDate = '11 نوفمبر 2026';
+  weddingDate = '06 نوفمبر 2026';
   day = 'الجمعة';
   time = '7:00 مساءً';
   venue = 'قاعة الرحمن الرحيم';
