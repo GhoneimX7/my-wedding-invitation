@@ -11,7 +11,7 @@ export class AppComponent implements OnInit, OnDestroy {
   bride = 'رؤى';
   weddingDate = '06 نوفمبر 2026';
   day = 'الجمعة';
-  time = '7:00 مساءً';
+  time = '8:30 مساءً';
   venue = 'قاعة الرحمن الرحيم';
   venueEng = 'Castle Wedding Hall';
 
@@ -26,9 +26,9 @@ export class AppComponent implements OnInit, OnDestroy {
   // QR code image pointing to the same location link
   qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=10&data=${encodeURIComponent(this.mapUrl)}`;
 
-  // Countdown target. NOTE: assumes +03:00 (Gulf Standard Time) — change the
-  // offset below if the ceremony is in a different timezone.
-  private readonly targetTime = new Date('2026-11-06T19:00:00+03:00').getTime();
+  // Countdown target: 8:30 PM Cairo time. Egypt's DST ends late October, so
+  // the offset on the wedding date is +02:00.
+  private readonly targetTime = new Date('2026-11-06T20:30:00+02:00').getTime();
   private timerHandle?: ReturnType<typeof setInterval>;
 
   days = 0;

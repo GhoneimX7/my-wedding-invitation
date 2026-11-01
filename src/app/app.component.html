@@ -67,7 +67,13 @@
     </svg>
 
     <div class="hero-content">
-      <p class="eyebrow">بمشيئة الله تعالى</p>
+      <!-- <section class="section verse-section" id = "verse"> -->
+        <div class="section-inner narrow">
+          <p class="mini-ornament">{{ basmallah }}</p>
+          <p class="verse-text">{{ quranVerse }}</p>
+          <p class="verse-reference">{{ quranReference }}</p>
+        </div>
+      <!-- </section> -->
       <p class="script hero-name">{{ groom }}</p>
       <div class="and-row"><span></span><b>و</b><span></span></div>
       <p class="script hero-name">{{ bride }}</p>
@@ -85,21 +91,15 @@
         <div class="countdown-item"><span class="countdown-value">{{ seconds }}</span><span class="countdown-label">ثانية</span></div>
       </div>
 
-      <button class="primary-button" (click)="scrollTo('verse')">افتحوا الدعوة <span>↓</span></button>
+      <button class="primary-button" (click)="scrollTo('invitation')">افتحوا الدعوة <span>↓</span></button>
     </div>
   </section>
 
-  <section class="section verse-section" id = "verse">
-    <div class="section-inner narrow">
-      <p class="mini-ornament">{{ basmallah }}</p>
-      <p class="verse-text">{{ quranVerse }}</p>
-      <p class="verse-reference">{{ quranReference }}</p>
-    </div>
-  </section>
+
 
   <section class="section intro" id="invitation">
     <div class="section-inner narrow">
-      <p class="eyebrow">احتفالٌ بالحب</p>
+      <!-- <p class="eyebrow">احتفالٌ بالحب</p> -->
       <h2>قلبان يجتمعان في بداية جميلة</h2>
       <p class="body-copy">يملأ قلوبنا الفرح ونحن ندعوكم لتكونوا جزءًا من يومنا المميز، ونبدأ معًا هذا الفصل الجديد من حياتنا. حضوركم ودعواتكم لنا تعني لنا الكثير.</p>
       <div class="mini-ornament">✦</div>
@@ -108,7 +108,7 @@
 
   <section class="section details-section" id="details">
     <div class="section-inner">
-      <p class="eyebrow">احفظوا الموعد</p>
+      <!-- <p class="eyebrow">احفظوا الموعد</p> -->
       <h2>حفل الزفاف</h2>
       <div class="details-grid">
         <article class="detail-card"><div class="detail-icon">♡</div><p class="detail-label">التاريخ</p><h3>{{ weddingDate }}</h3><p>{{ day }}</p></article>
@@ -120,12 +120,19 @@
 
   <section class="section story">
     <div class="section-inner story-grid">
-      <div class="story-copy"><p class="eyebrow">قصتنا</p><h2>لمحة عنّا</h2><p class="body-copy">بدأت القصة بكلمة، ونمت مع كل حديث، وتحولت إلى وعدٍ بالسير معًا في دروب الحياة.</p><p class="body-copy">واليوم، ومحاطين بمن نحب، يسعدنا أن نقول "قبلنا" ونبدأ حياتنا الجديدة معًا.</p></div>
-      <div class="story-photo"><img class="couple-photo" src="assets/couple.jpg" alt="{{ groom }} و{{ bride }}"></div>
+      <div class="story-copy">
+        <!-- <p class="eyebrow">قصتنا</p> -->
+        <h2>لمحة عنّا</h2>
+        <p class="body-copy">بدأت القصة بكلمة، ونمت مع كل حديث، وتحولت إلى وعدٍ بالسير معًا في دروب الحياة.</p>
+        <p class="body-copy">واليوم، ومحاطين بمن نحب، يسعدنا أن نقول "قبلنا" ونبدأ حياتنا الجديدة معًا.</p>
+      </div>
+      <div class="story-photo">
+        <img class="couple-photo" src="assets/couple.jpg" alt="{{ groom }} و{{ bride }}">
+      </div>
     </div>
   </section>
 
-  <section class="section schedule-section" id="schedule">
+  <!-- <section class="section schedule-section" id="schedule">
     <div class="section-inner narrow"><p class="eyebrow">برنامج الحفل</p><h2>يوم الزفاف</h2>
       <div class="timeline">
         <div class="timeline-item"><span class="timeline-time">7:00 مساءً</span><div><h3>استقبال الضيوف</h3><p>الترحيب وتقديم المشروبات</p></div></div>
@@ -134,14 +141,14 @@
         <div class="timeline-item"><span class="timeline-time">8:30 مساءً</span><div><h3>الختام</h3><p>لتبدأ الفرحة الحقيقية</p></div></div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
   <section class="section location-section" id="location">
     <div class="section-inner location-card">
       <div>
-        <p class="eyebrow">موقع الحفل</p>
+        <!-- <p class="eyebrow">موقع الحفل</p> -->
         <h2>{{ venue }}</h2>
         <h2>{{ venueEng }}</h2>
       </div>
@@ -155,7 +162,10 @@
   </section>
 
   <section class="section rsvp-section" id="rsvp">
-    <div class="section-inner narrow"><p class="eyebrow">يسعدنا احتفالكم معنا</p><h2>هل ستنضمون إلينا؟</h2><p class="body-copy">شاركنا برسالة في يومنا المميز</p>
+    <div class="section-inner narrow">
+      <!-- <p class="eyebrow">يسعدنا احتفالكم معنا</p> -->
+      <h2>هل ستنضمون إلينا؟</h2>
+      <p class="body-copy">شاركنا برسالة في يومنا المميز</p>
       @if (!rsvpSubmitted) {
         <form class="rsvp-form" (submit)="onRsvpSubmit($event, nameInput.value, messageInput.value)">
           <label>الاسم<input type="text" #nameInput placeholder="أدخل اسمك" required></label>
