@@ -523,6 +523,24 @@ h2 {
   font-size: 10px;
 }
 
+.bus-note {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 640px;
+  padding: 22px 28px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(231, 180, 174, .12);
+  text-align: center;
+}
+
+.bus-note p {
+  margin: 0;
+  color: var(--burgundy);
+  font: 600 20px/1.9 'Cairo', sans-serif;
+}
+
 .rsvp-section {
   text-align: center;
   background:
@@ -539,11 +557,9 @@ h2 {
 }
 
 .rsvp-form label {
+  display: block;
   color: var(--burgundy);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .15em;
-  text-transform: uppercase;
+  font: 600 17px/1.6 'Cairo', sans-serif;
 }
 
 .rsvp-form input,
@@ -558,7 +574,12 @@ h2 {
   outline: none;
   background: rgba(255,255,255,.7);
   color: var(--ink);
-  font: 15px 'Cairo', sans-serif;
+  font: 400 16px 'Cairo', sans-serif;
+}
+
+.rsvp-form input::placeholder,
+.rsvp-form textarea::placeholder {
+  color: #9a8e90;
 }
 
 .rsvp-form input:focus,
