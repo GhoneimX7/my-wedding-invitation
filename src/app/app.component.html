@@ -67,13 +67,7 @@
     </svg>
 
     <div class="hero-content">
-      <!-- <section class="section verse-section" id = "verse"> -->
-        <div class="section-inner narrow">
-          <p class="mini-ornament">{{ basmallah }}</p>
-          <p class="verse-text">{{ quranVerse }}</p>
-          <p class="verse-reference">{{ quranReference }}</p>
-        </div>
-      <!-- </section> -->
+      <p class="eyebrow">بمشيئة الله تعالى</p>
       <p class="script hero-name">{{ groom }}</p>
       <div class="and-row"><span></span><b>و</b><span></span></div>
       <p class="script hero-name">{{ bride }}</p>
@@ -91,11 +85,17 @@
         <div class="countdown-item"><span class="countdown-value">{{ seconds }}</span><span class="countdown-label">ثانية</span></div>
       </div>
 
-      <button class="primary-button" (click)="scrollTo('invitation')">افتحوا الدعوة <span>↓</span></button>
+      <button class="primary-button" (click)="scrollTo('verse')">افتحوا الدعوة <span>↓</span></button>
     </div>
   </section>
 
-
+      <section class="section verse-section" id = "verse">
+        <div class="section-inner narrow">
+          <p class="mini-ornament">{{ basmallah }}</p>
+          <p class="verse-text">{{ quranVerse }}</p>
+          <p class="verse-reference">{{ quranReference }}</p>
+        </div>
+      </section>
 
   <section class="section intro" id="invitation">
     <div class="section-inner narrow">
@@ -111,9 +111,23 @@
       <!-- <p class="eyebrow">احفظوا الموعد</p> -->
       <h2>حفل الزفاف</h2>
       <div class="details-grid">
-        <article class="detail-card"><div class="detail-icon">♡</div><p class="detail-label">التاريخ</p><h3>{{ weddingDate }}</h3><p>{{ day }}</p></article>
-        <article class="detail-card featured"><div class="detail-icon">◷</div><p class="detail-label">الوقت</p><h3>{{ time }}</h3><p>حفل الزفاف</p></article>
-        <article class="detail-card"><div class="detail-icon">⌖</div><p class="detail-label">المكان</p><h3>{{ venue }} </h3></article>
+        <article class="detail-card">
+          <div class="detail-icon">♡</div>
+          <!-- <p class="detail-label">التاريخ</p> -->
+          <h3>{{ day }} {{ weddingDate }}</h3>
+          <!-- <p>{{ day }}</p> -->
+        </article>
+        <article class="detail-card featured">
+          <div class="detail-icon">◷</div>
+          <!-- <p class="detail-label">الوقت</p> -->
+          <h3>{{ time }}</h3>
+          <!-- <p>حفل الزفاف</p> -->
+        </article>
+        <article class="detail-card">
+          <div class="detail-icon">⌖</div>
+          <!-- <p class="detail-label">المكان</p> -->
+          <h3>{{ venue }} </h3>
+        </article>
       </div>
     </div>
   </section>
